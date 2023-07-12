@@ -1,5 +1,9 @@
 import 'dart:io';
 
+import 'Div_function.dart';
+import 'Multiply_function.dart';
+import 'Percentage_function.dart';
+import 'Sub_function.dart';
 import 'Sum_function.dart';
 
 void main () {
@@ -29,20 +33,11 @@ void main () {
     num mltp = toMltp(num1, num2);
     print('$num1 x $num2 = $mltp');
   }
+  else if (function == '%') {
+    num percentage = toPercentage(num1, num2);
+    print('$num1 % $num2 = $percentage');
+  }
   else{
     print('Function not found');
   }
-}
-
-toSub(int num1, int num2){
-  num result = num1 - num2 ;
-  return result;
-}
-toDiv(int num1, int num2){
-  num result = num1 / num2 ;
-  return result;
-}
-toMltp(int num1, int num2){
-  num result = num1 * num2 ;
-  return result;
 }
